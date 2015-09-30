@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/amitashutosh/react-first/issues"
   },
-  "homepage": "https://github.com/amitashutosh/react-first#readme"
+  "homepage": "https://github.com/amitashutosh/react-first#readme",
+  "devDependencies": {
+    "babelify": "^6.3.0",
+    "browserify": "^11.2.0",
+    "gulp": "^3.9.0",
+    "vinyl-source-stream": "^1.1.0"
+  }
 }
