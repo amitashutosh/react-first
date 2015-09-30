@@ -18674,15 +18674,30 @@ ReactDOM.render( section, document.getElementById('react-application'));
 
 */
 
+/*
+
+//Example 2
+
 var createListItemElement = React.createFactory('li');
 
 var listItemElement1 = createListItemElement({ className: 'item-1', key: 'item-1' }, 'Item1');
 var listItemElement2 = createListItemElement({ className: 'item-2', key: 'item-2' }, 'Item2');
 var listItemElement3 = createListItemElement({ className: 'item-3', key: 'item-3' }, 'Item3');
 
-var reactFragment = [listItemElement1, listItemElement2, listItemElement3];
+var reactFragment = [ listItemElement1, listItemElement2, listItemElement3 ];
 
 var listOfItems = React.createElement('ul', { className: 'list-of-items' }, reactFragment);
+
+ReactDOM.render(listOfItems, document.getElementById('react-application'));
+
+*/
+
+var listItemElement1 = React.DOM.li({ className: 'item-1', key: 'item-1' }, 'Item1');
+var listItemElement2 = React.DOM.li({ className: 'item-2', key: 'item-2' }, 'Item2');
+var listItemElement3 = React.DOM.li({ className: 'item-3', key: 'item-3' }, 'Item3');
+
+var reactFragment = [listItemElement1, listItemElement2, listItemElement3];
+var listOfItems = React.DOM.ul({ className: 'list-of-items' }, reactFragment);
 
 ReactDOM.render(listOfItems, document.getElementById('react-application'));
 
