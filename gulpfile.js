@@ -14,3 +14,7 @@ gulp.task('default', function(){
             .pipe(source('react-first.js'))
             .pipe(gulp.dest('./build'));
 });
+
+gulp.task('test', function(){
+   return browserify('./source/')
+});
