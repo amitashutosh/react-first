@@ -16,5 +16,9 @@ gulp.task('default', function(){
 });
 
 gulp.task('test', function(){
-   return browserify('./source/')
+   return browserify('./source/test.js')
+            .transform(babelify)
+            .bundle()
+            .pipe(source('react-test.js'))
+            .pipe(gulp.dest('./build'));
 });
